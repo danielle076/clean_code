@@ -87,3 +87,30 @@ Niet doen:
 - Voeg geen voorvoegsels (prefix) toe aan klassenamen
 - Gebruik geen Hongaarse notatie in de variabele
   - bijv. `long lCount = 8;` of `String sName  "Danielle";`
+
+## Nette methodes
+
+Houd je methodes klein!
+
+Methodes moeten één ding doen. Dit moeten ze goed doen en ze moeten alleen dat doen.
+
+### Stepdown rule
+
+Zorg ervoor dat een methode die een andere methode aanroept boven de aangeroepte methode staat.
+
+We zijn getraind om van boven naar beneden te lezen.
+
+### Aantal argumenten
+
+Probeer het aantal argumenten zo klein mogelijk te houden. Ideaal is nul. Vier of meer is te veel.
+
+Gebruik builder of factory patterns
+
+### Geen flag arguments
+
+Maak geen methodes die iets doen op basis van een te ontvangen boolean - argument. Maak liever twee methodes.
+
+### Command query seperation
+
+Een methode moet een antwoord geven óf een methode moet data wijzigen. 
+Niet allebei tegelijk! In andere woorden een methode moet iets aan een object veranderen of een methode moet informatie van het object teruggeven.
