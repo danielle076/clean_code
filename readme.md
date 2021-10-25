@@ -106,7 +106,7 @@ Probeer het aantal argumenten zo klein mogelijk te houden. Ideaal is nul. Vier o
 
 Gebruik builder of factory patterns
 
-### Geen flag arguments
+### Geen flag (boolean) argumenten
 
 Maak geen methodes die iets doen op basis van een te ontvangen boolean - argument. Maak liever twee methodes.
 
@@ -114,3 +114,48 @@ Maak geen methodes die iets doen op basis van een te ontvangen boolean - argumen
 
 Een methode moet een antwoord geven óf een methode moet data wijzigen. 
 Niet allebei tegelijk! In andere woorden een methode moet iets aan een object veranderen of een methode moet informatie van het object teruggeven.
+
+## Commentaar
+
+Don't comment bad code. Rewrite it.
+
+Gebruik methode- en variabelenamen om je code begrijpbaar te maken.
+
+```
+// Check to see if employee is eligible for full benefits
+if ((employee.flags & HOURLY_FLAG) && (employee.age > 65)) {
+// ...
+}
+// Of
+if (employee.isEligibleForFullBenefits()) {
+// ...
+}
+```
+
+### Wanneer niet
+
+- Overtollig commentaar
+- Onbedoeld misleidend commentaar
+- Bij sluit accolades plaatsen
+- Uitgecommentarieerde code
+  - Is wel prima bij tijdens ontwikkelen of testen
+- Positie-markering 
+  - Waar je bent, of vanaf deze regel zijn er getters/setters
+
+### Wanneer wel
+
+- Public API - JavaDoc
+  - interactie naar buiten toe
+- Legal comments wanneer erom gevraagd wordt, bijvoorbeeld over licenties
+- JavaDoc intern (wanneer de opdrachtgever daarom vraagt)
+  - nadeel is dat je hem moet bijhouden
+- Verduidelijking of verantwoording
+- Als waarschuwing
+- TODO comments 
+  - IntelliJ: `//TODO`
+
+### Boy scout rule
+
+Leave the campground cleaner than you found it.
+
+Kijk wel uit voor het creëren van nieuwe bugs bij het aanpassen.
