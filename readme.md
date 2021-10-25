@@ -6,7 +6,7 @@
 - verhoogt onderhoudbaarheid en uitbreidbaarheid van de applicatie
 - voorkomt vertraging/stilstand van nieuwe features
 
-## Naamgeving inleiding
+## Naamgeving
 
 Hoe noem je je `packages`, `klassen`, `methodes` en `variabelen`.
 
@@ -75,7 +75,15 @@ Java gebruikt CamelCase als praktijk voor het schrijven van namen van methoden, 
   - meervoud houd je beschikbaar voor de variabelen die een verzameling bevatten, bijvoorbeeld een list van het type customer noemen we customers
 - Methode-namen zijn `werkwoorden` (+ lijdend voorwerp)
   - Methoden doen dingen, bijvoorbeeld `getCustomer`, `saveCustomer`
-- Alle namen moeten niet `ambigious` zijn, de moeten eenduidig zijn
+- Alle namen moeten eenduidig zijn (niet `ambigious`)
 - Namen moeten uitleggen of verklaren wat de inhoud is. 
   - Wanneer een lange benaming hierbij helpt moet je dit doen
 
+Niet doen:
+- Wees niet grappig
+  - code moet strak, zakelijk en duidelijk zijn
+- Gebruik geen generieke namen, zoals Manager, Processor, Data etc.
+  - deze wordt niet altijd gevolgd
+- Voeg geen voorvoegsels (prefix) toe aan klassenamen
+- Gebruik geen Hongaarse notatie in de variabele
+  - bijv. `long lCount = 8;` of `String sName  "Danielle";`
